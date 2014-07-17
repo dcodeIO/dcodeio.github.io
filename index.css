@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'Gruppo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gruppo'), url(assets/gruppo-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Gruppo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gruppo'), url(assets/gruppo-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+html, body {
+  width: 100%; height: 100%; margin: 0; overflow: hidden;
+  background: #070809;
+}
+canvas {
+  position: absolute; top: 0px; left: 0px; z-index: 0;
+}
+#about {
+  position: absolute; top: 32px; left: 32px; z-index: 1;
+  padding-right: 32px;
+}
+#about * {
+  color: #ddd; font-family: 'Gruppo';
+  font-size: 14pt;
+  font-weight: normal;
+  margin: 0;
+  line-height: 120%;
+}
+a {
+  text-decoration: none; color: #fff; border-bottom: 1px solid #999;
+}
+a:hover {
+  text-decoration: none; border-bottom: 1px solid #0099ff;
+}
+ul {
+  list-style-type: none; margin: 0; padding: 0;
+}
+ul li {
+  display: inline-block;
+  padding-right: 16px;
+}
+ul a {
+  opacity: 0.8;
+  border: 0;
+}
+ul a:hover {
+  opacity: 1.0;
+  border: 0;
+}
