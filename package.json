@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "marked": "^4.0.18"
+  }
+}

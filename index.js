@@ -68,3 +68,32 @@ fetch("index.wasm").then(response =>
 }).catch(err => {
   throw err;
 });
+
+
+var currentView = null;
+
+function changeView() {
+  if (currentView) {
+    currentView.style.display = "none";
+    currentView = null;
+  }
+  const view = document.getElementById(location.hash.substring(1));
+  if (view) {
+    view.style.display = "block";
+    view.scrollTop = 0;
+    currentView = view;
+  } else {
+    document.location.hash = "";
+  }
+}
+
+addEventListener("hashchange", changeView);
+addEventListener("load", changeView);
+
+for (let view of document.getElementsByClassName("view")) {
+  const x = document.createElement("a");
+  x.href = "#";
+  x.className = "x";
+  x.innerHTML = "X";
+  view.appendChild(x);
+}
