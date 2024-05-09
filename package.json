@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "serve": "14.2.1"
+  },
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "dependencies": {
+    "three": "0.161.0"
+  }
+}

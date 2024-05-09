@@ -1,0 +1,92 @@
+:root {
+  --foreground-color: #000;
+  --background-color: #fff;
+  --grid-color: #fff;
+  --grid-image: none;
+}
+.noprint {
+  display: none;
+}
+.onlyprint {
+  display: initial;
+}
+h1, h2, h3, .subtitle {
+  break-after: avoid;
+  break-inside: avoid;
+}
+p, footer {
+  break-inside: avoid;
+}
+footer {
+  margin-top: 3rem;
+}
+
+/* Switch header */
+body {
+  padding-top: calc(330px - 1.25rem);
+}
+body > header {
+  height: 330px;
+}
+body > header canvas {
+  display: none;
+}
+body > header img {
+  display: block;
+  position: absolute;
+  top: 50%; left: 50%;
+  translate: -50% -50%;
+  width: 250px;
+  height: 250px;
+  background: center/250px no-repeat url(assets/logo.svg);
+}
+
+/* Disable backgrounds and decorations */
+html, h1, h2, .button, a, section.references > aside.sticky, ul.tags > li {
+  color: var(--foreground-color);
+  background: none;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+footer img.icon {
+  filter: none;
+  opacity: 1;
+}
+ul.tags > li::before {
+  display: none;
+}
+
+/* Disable animations */
+.glitch, .glitch::before, .glitch::after {
+  animation: none !important;
+}
+section.references article {
+  transition: none !important;
+  opacity: 1 !important;
+}
+object, video, article canvas {
+  display: none;
+  /* filter: invert(1.0), hue-rotate(180deg); */
+}
+#portfolio {
+  --scroll: 1.0 !important;
+}
+#libraries .logos > * {
+  opacity: 0.8 !important;
+  filter: invert(1.0);
+  animation: none !important;
+}
+article blockquote {
+  animation: none;
+  background: none;
+  color: var(--muted-color);
+}
+
+/* Add borders */
+ul.tags > li {
+  border: 1px solid var(--muted-color);
+  border-radius: 5px;
+}
+.button, footer span.label {
+  border: 1px solid var(--muted-color);
+}

@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="280" viewBox="-0.5 -0.5 680 280">
+    <path fill="none" pointer-events="all" d="M0 0h680v280H0z"/>
+    <path fill="none" stroke="#2f2f2f" pointer-events="all" d="M10 20h300v20H10z"/>
+    <text x="160" y="34" fill="#9C9C9C" font-family="sans-serif" font-size="12" text-anchor="middle">AssemblyScript</text>
+    <path fill="none" stroke="#2f2f2f" pointer-events="all" d="M190 40h300v20H190z"/>
+    <text x="340" y="54" fill="#9C9C9C" font-family="sans-serif" font-size="12" text-anchor="middle">WebAssembly IR</text>
+    <circle cx="19" cy="30" fill="#f66" stroke="#2f2f2f" pointer-events="all" r="4"/>
+    <circle cx="31" cy="30" fill="#ff9" stroke="#2f2f2f" pointer-events="all" r="4"/>
+    <circle cx="43" cy="30" fill="#00d1b2" stroke="#2f2f2f" pointer-events="all" r="4"/>
+    <circle cx="199" cy="50" fill="#f66" stroke="#2f2f2f" pointer-events="all" r="4"/>
+    <circle cx="211" cy="50" fill="#ff9" stroke="#2f2f2f" pointer-events="all" r="4"/>
+    <circle cx="223" cy="50" fill="#00d1b2" stroke="#2f2f2f" pointer-events="all" r="4"/>
+    <path d="M190 220H10V40m360 200H190V60" fill="none" stroke="#2f2f2f" stroke-miterlimit="10" pointer-events="stroke"/>
+    <path fill="none" stroke="#2f2f2f" pointer-events="all" d="M370 60h300v20H370z"/>
+    <text x="520" y="74" fill="#9C9C9C" font-family="sans-serif" font-size="12" text-anchor="middle">WebAssembly Binary</text>
+    <circle cx="379" cy="70" fill="#f66" stroke="#2f2f2f" pointer-events="all" r="4"/>
+    <circle cx="391" cy="70" fill="#ff9" stroke="#2f2f2f" pointer-events="all" r="4"/>
+    <circle cx="403" cy="70" fill="#00d1b2" stroke="#2f2f2f" pointer-events="all" r="4"/>
+    <path d="M670 80v180H370V80" fill="none" stroke="#2f2f2f" stroke-miterlimit="10" pointer-events="stroke"/>
+    <path d="M110 220q20 50 60 55t75-35" fill="none" stroke="#9c9c9c" stroke-width="2" stroke-miterlimit="10" pointer-events="stroke"/>
+    <g stroke="#9c9c9c" stroke-width="2" stroke-miterlimit="10">
+        <path d="M415 40q45-40 80-35t51.2 45.5" fill="none" pointer-events="stroke"/>
+        <path d="m549.17 57.92-6.69-5.94 7.43-2.97Z" fill="#9c9c9c" pointer-events="all"/>
+    </g>
+    <g data-label="source" transform="translate(-0.5 -0.5)">
+        <path fill="none" pointer-events="all" d="M20.5 50H190v160H20.5z"/>
+        <foreignObject id="cell-source" pointer-events="none" x="23" y="51" width="168" height="156" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="code">
+                <div>export function fib(n: i32): i32 {
+  var a = 0, b = 1
+  if (n &gt; 0) {
+    while (--n) {
+      let t = a + b
+      a = b
+      b = t
+    }
+    return b
+  }
+  return a
+}</div>
+            </div>
+        </foreignObject>
+    </g>
+    <g data-label="wat" transform="translate(-0.5 -0.5)">
+        <path fill="none" pointer-events="all" d="M201 70h169v160H201z"/>
+        <foreignObject id="cell-wat" pointer-events="none" x="203" y="71" width="167" height="156" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="code">
+                <div>(module
+ (export "fib"
+  (func $module/fib (param $n i32) (result i32)
+   (local $a i32)
+   (local $b i32)
+   (local $t i32)
+   i32.const 1
+   local.set $a
+   local.get $n
+   i32.const 0
+   i32.gt_s
+   if
+    loop $while-continue
+     local.get $n
+     i32.const 1
+     i32.sub
+     local.tee $n
+     if
+      local.get $a
+      local.get $b
+      i32.add
+      local.set $t
+      local.get $a
+      local.set $b
+      local.get $t
+      local.set $a
+      br $while-continue
+     end
+    end
+    local.get $a
+    return
+   end
+   i32.const 0
+  )
+ )
+)</div>
+            </div>
+        </foreignObject>
+    </g>
+    <g data-label="wasm" transform="translate(-0.5 -0.5)">
+        <path fill="none" pointer-events="all" d="M381 90h279v160H381z"/>
+        <foreignObject id="cell-wasm" pointer-events="none" x="383" y="91" width="277" height="156" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="code">
+                <div>00 61 73 6D 01 00 00 00    . a s m . . . .
+01 06 01 60 01 7F 01 7F    . . . ` . . . .
+03 02 01 00 07 07 01 03    . . . . . . . .
+66 69 62 00 00 0A 35 01    f i b . . . 5 .
+33 01 03 7F 41 01 21 01    3 . . . A . ! .
+20 00 41 00 4A 04 40 03      . A . J . @ .
+40 20 00 41 01 6B 22 00    @ . . A . k " .
+04 40 20 01 20 02 6A 21    . @   .   . j !
+03 20 01 21 02 20 03 21    .   . ! .   . !
+01 0C 01 0B 0B 20 01 0F    . . . . .   . .
+0B 41 00 0B 00 2B 04 6E    . A . . . + . n
+61 6D 65 01 0D 01 00 0A    a m e . . . . .
+6D 6F 64 75 6C 65 2F 66    m o d u l e / f
+69 62 02 0F 01 00 04 00    i b . . . . . .
+01 30 01 01 31 02 01 32    . 0 . . 1 . . 2
+03 01 33 04 04 01 00 01    . . 3 . . . . .
+30                         0</div>
+            </div>
+        </foreignObject>
+    </g>
+    <style>
+    .code {
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+        color: #9c9c9c;
+        font-family: monospace;
+        font-size: 11px;
+        line-height: 1.2;
+        overflow: hidden;
+        white-space: pre;
+    }
+    @keyframes fadeout {
+        50% { color: #9c9c9c; translate: none; filter: blur(0); }
+        100% { color: #060708; translate: 50px 0; filter: blur(3px); }
+    }
+    </style>
+    <script><![CDATA[
+window.addEventListener("load", () => {
+  function type(elem) {
+    let text = elem.innerText;
+    elem.innerText = "";
+    let newLine = true;
+    let lines = [];
+    let offset = 0;
+    function append() {
+      if (newLine) {
+        let div = document.createElement("div");
+        elem.appendChild(div);
+        lines.push(div);
+        newLine = false;
+      }
+      let char;
+      do {
+        char = text.charAt(offset++);
+        let line = lines[lines.length - 1];
+        line.innerHTML += char;
+      } while (char == " ");
+      elem.parentElement.scrollTop = 9000;
+      if (char == "\n") newLine = true;
+      if (offset == text.length) {
+        offset = 0;
+        elem.style.animation = "fadeout 2s forwards ease-in";
+        setTimeout(() => {
+          lines.forEach(line => {
+            elem.removeChild(line);
+          });
+          elem.style.animation = "";
+          lines = [];
+          newLine = true;
+          setTimeout(append, 250);
+        }, 2000);
+      } else {
+        setTimeout(append, 80);
+      }
+    }
+    append();
+  }
+  type(document.querySelector("#cell-source div div"));
+  type(document.querySelector("#cell-wat div div"));
+  type(document.querySelector("#cell-wasm div div"));
+});
+]]></script>
+</svg>

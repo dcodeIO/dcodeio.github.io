@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="380" viewBox="-0.5 -0.5 640 380">
+    <path fill="none" d="M0 0h640v380H0z"/>
+    <image href="mobile.svg" width="158.51" height="320" x="469.5" y="49.5" preserveAspectRatio="none"/>
+    <rect width="140" height="304" x="479" y="58" fill="#070809" stroke="#2f2f2f" rx="18.2" ry="18.2"/>
+    <rect width="33" height="10" x="532.5" y="62" fill="#2f2f2f" rx="5" ry="5"/>
+    <image href="../logo.svg" width="113.75" height="113.75" x="491.63" y="89.5" preserveAspectRatio="none"/>
+    <path fill="#fff" d="M481 250h50v15h-50z"/>
+    <path fill="#2f2f2f" d="M491 275h120v5H491zm0 10h50v5h-50zm0 20h120v5H491zm0 10h90v5h-90zm0 10h100v5H491zm0-90h90v5h-90z"/>
+    <circle cx="560" cy="67" r="3" fill="#171717"/>
+</svg>

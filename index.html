@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>I'm dcode, Versatile Software Engineer</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description" content="Hi there, this is my personal portfolio. I hope you enjoy exploring it!"/>
+<meta name="theme-color" content="#000"/>
+<link rel="icon" href="assets/logo-adaptive.svg"/>
+<link rel="preload" href="index.css" as="style"/>
+<link rel="preload" href="assets/logo.png" as="image"/>
+<link rel="stylesheet" type="text/css" href="index.css"/>
+<link rel="stylesheet" type="text/css" href="print.css" media="print"/>
+<script type="importmap">{
+  "imports": {
+    "three": "./lib/three/build/three.module.min.js",
+    "three/addons/": "./lib/three/examples/jsm/"
+  }
+}</script>
+<script type="module" src="app/index.js" async></script>
+</head>
+<body>
+<header aria-hidden="true">
+  <canvas></canvas>
+  <img src="assets/logo-inverted.svg" width="250" height="250" alt="dcode.io logo"/>
+  <div id="loading"><div></div></div>
+</header>
+<main>
+  <section class="about">
+    <div id="about" class="sticky">
+      <aside>About me<span aria-hidden="true"> ://</span></aside>
+      <h1 id="up" data-text="Hi there!" class="glitch">Hi there!</h1>
+      <p><span class="subtitle">I'm Daniel</span>, a highly versatile software engineer.</p>
+      <p>My experience ranges from developing entire <a href="#community">social networks</a>, <a href="#games">computer games</a>, <a href="#libraries">open source libraries</a>, <a href="#messenger">cross-platform applications</a> and <a href="#mods">game modifications</a> to conceptualizing and crafting innovative <a href="#compilers">programming languages</a>. I also designed and developed <a href="#embedded">electronic systems</a> for automotive applications and made cutting-edge contributions to <a href="#standards">web standards</a>.</p>
+      <ul class="tags">
+        <li class="primary">Based in Germany</li>
+        <li class="primary">BSc Computer Science</li>
+        <li>Full-Stack</li>
+        <li>OSS</li>
+        <li>Design Web & Print</li>
+        <li>Cross-Platform</li>
+        <li>Embedded</li>
+        <li>Tooling</li>
+        <li>Games</li>
+        <li>Social Networks</li>
+        <li>Compilers</li>
+        <li>Standardization</li>
+      </ul>
+      <p>If you have job opportunities available that fit my profile, don't hesitate and get in touch. I'd love to hear from you!</p>
+      <p class="buttons">
+        <a href="mailto:dcode@dcode.io" class="button"><img src="assets/icons/envelope.svg" class="icon" width="20" height="20" alt="" /> Contact<span class="onlyprint">: dcode@dcode.io</a>
+        <span class="noprint"><a href="." class="button" id="share"><img src="assets/icons/share.svg" width="20" height="20" class="icon" alt="" /> Share</a></span>
+      </p>
+    </div>
+  </section>
+  <section class="references">
+    <aside class="sticky">Professional Experience<span aria-hidden="true"> ://</span></aside>
+    <article id="embedded">
+      <h2 data-text="Embedded Systems Engineer" class="glitch">Embedded Systems Engineer</h2>
+      <ul class="tags">
+        <li class="primary">Freelance</li>
+        <li class="primary">2024-</li>
+        <li>Arduino</li>
+        <li>Raspberry Pi</li>
+        <li>VESC</li>
+        <li>C++</li>
+        <li>Lisp</li>
+        <li>CAN</li>
+        <li>OBD-2</li>
+      </ul>
+      <p>Took charge of a diverse portfolio in electronics research and development, specializing in aftermarket car parts and accompanying exhibition systems. Rapidly acquired expertise to guide the team to success, personally handling programming, assembly, and calibration of components. The automotive system achieved certification to carry the CE mark and has been approved for general road traffic use by DEKRA, paving the way to series production.</p>
+      <object type="image/svg+xml" data="assets/images/circuit.svg" aria-label="Animated electronic relay circuit showing various components such as resistors, diodes and optocouplers interacting with each other." tabindex="-1" width="642" style="aspect-ratio: 642/322"></object>
+      <p class="subtitle" id="embedded-areas">Key areas</p>
+      <div class="areas" aria-labelledby="embedded-areas">
+        <div class="area">
+          <h3>MCU & ESC Programming</h3>
+          <p>Programmed Arduino (ESP32), Raspberry Pi and VESC in C++ and Lisp. Contributed patches to the VESC firmware in the process, ensuring correct and optimal operation.</p>
+        </div>
+        <div class="area">
+          <h3>Electronics Assembly</h3>
+          <p>Assembled motor controllers, sensors, optocouplers, relays and other circuitry components to power, control and inspect nominal operation of respective electrical systems.</p>
+        </div>
+        <div class="area">
+          <h3>Extensive Documentation</h3>
+          <p>Produced comprehensive documentation with schematics and guidelines, empowering the team with the knowledge to independently operate individual components.</p>
+        </div>
+        <div class="area">
+          <h3>Project Responsibility</h3>
+          <p>Led electrical and software development, ensuring effective coordination between divisions. Contributed technical expertise to drive successful project outcomes and surpass goals.</p>
+        </div>
+        <div class="area">
+          <h3>Automotive Interface</h3>
+          <p>Added CAN bus communication using the OBD-2 protocol with car diagnostic systems, enabling real-time data retrieval for maintaining safe operation.</p>
+        </div>
+        <div class="area">
+          <h3>Exhibition Systems</h3>
+          <p>Also designed an interactive, sensor-driven exhibition display, utilizing Chromium on top of a minimal Linux-based OS to interface with GPIO for seamless presentation control.</p>
+        </div>
+      </div>
+    </article>
+    <article id="homeserver">
+      <h2 data-text="Senior Software Engineer" class="glitch">Senior Software Engineer</h2>
+      <ul class="tags">
+        <li class="primary">Contractor/EOR</li>
+        <li class="primary">2024-25</li>
+        <li>Docker</li>
+        <li>Linux</li>
+        <li>TypeScript</li>
+        <li>Node.js</li>
+        <li>React</li>
+        <li>tRPC</li>
+      </ul>
+      <p>As part of a cross-functional team, I developed key system components for a home server startup's open-source operating system. I devised and implemented highly requested features like swappable apps, file management capabilities, network sharing, external storage integration, and additional system configuration options while tackling outstanding issues and implementing major performance improvements along the way.</p>
+      <p class="subtitle" id="homeserver-areas">Key areas</p>
+      <div class="areas" aria-labelledby="homeserver-areas">
+        <div class="area">
+          <h3>Backend Engineering</h3>
+          <p>Designed and implemented robust backend systems to level up the home server experience, involving system configuration, app modularity, and storage management.</p>
+        </div>
+        <div class="area">
+          <h3>Performance Optimization</h3>
+          <p>Thoroughly profiled the system, eliminated bottlenecks, reduced redundancy, identified caching opportunities, and ensured a snappy experience even on low-end devices.</p>
+        </div>
+      </div>
+      <p class="subtitle" id="homeserver-samples">Work samples</p>
+      <ul class="samples" aria-labelledby="homeserver-samples">
+        <li>Contributions to <a href="https://github.com/getumbrel/umbrel/releases/tag/1.4.0-beta.1" rel="external noopener">umbrelOS 1.4</a>:<br />File manager backend, network sharing with Time Machine integration, external storage support.</li>
+        <li>Contributions to <a href="https://github.com/getumbrel/umbrel/releases/tag/1.3.0" rel="external noopener">umbrelOS 1.3</a>:<br />Swappable apps, DNS configuration, factory reset, fuzzy search, performance enhancements, snappy UI.</li>
+      </ul>
+    </article>
+    <article id="webdev">
+      <h2 data-text="Serial Web Developer" class="glitch">Serial Web Developer</h2>
+      <ul class="tags">
+        <li class="primary">Self-employed</li>
+        <li class="primary">2024</li>
+        <li>Web Design</li>
+        <li>HTML/CSS</li>
+        <li>JavaScript</li>
+        <li>WebGL</li>
+        <li>SVG</li>
+        <li>CI/CD</li>
+      </ul>
+      <p>Redesigned my personal portfolio website with the aim of strengthening my skills in frontend development through hands-on practice. Utilized a blend of cutting-edge technologies and industry best practices to deliver a modern user experience, characterized by a minimalistic yet captivating design that resonates with my aesthetic taste. I hope you enjoy exploring it :-)</p>
+      <div id="portfolio" class="scroll">
+        <object class="desktop" type="image/svg+xml" data="assets/images/portfolio-desktop.svg" aria-label="Concept illustration of the site on desktop." tabindex="-1" width="640" style="aspect-ratio: 640/380"></object>
+        <object class="mobile" type="image/svg+xml" data="assets/images/portfolio-mobile.svg" aria-label="Concept illustration of the site on mobile." tabindex="-1" width="640" style="aspect-ratio: 640/380"></object>
+      </div>
+      <p class="subtitle" id="webdev-areas">Key areas</p>
+      <div class="areas" aria-labelledby="webdev-areas">
+        <div class="area">
+          <h3>Modern CSS</h3>
+          <p>Implemented responsive and contemporary layouts using modern CSS features, prioritizing optimal user experience across devices. Notably, no frameworks have been harmed in the process.</p>
+        </div>
+        <div class="area">
+          <h3>2D & 3D Animation</h3>
+          <p>Utilized Three.js/WebGL to create a captivating header animation and integrated animated SVGs for dynamic visual storytelling. Additional subtle CSS animations, some driven by scripting, ensure a polished visual experience.</p>
+        </div>
+        <div class="area">
+          <h3>Best Practices</h3>
+          <p>Ensured adherence to accessibility guidelines, prioritizing inclusivity and usability for all users, and thoroughly tested the site to meet adequate performance, progressive enhancement and overall quality standards.</p>
+        </div>
+        <div class="area">
+          <h3>Brand Identity</h3>
+          <p>Created a cohesive brand identity for myself, encompassing logo design, color scheme selection, and font typography. Ensured overall coherency in style, reflecting professionalism and consistency across branding elements.</p>
+        </div>
+      </div>
+      <div class="onlyprint">
+        <p class="subtitle" id="webdev-samples">Work samples</p>
+        <ul class="samples" aria-labelledby="webdev-samples">
+          <li><a href="https://dcode.io" rel="external noopener">https://dcode.io</a><br />My personal website.</li>
+        </ul>
+      </div>
+    </article>
+    <article id="compilers">
+      <h2 data-text="AssemblyScript Project Lead" class="glitch">AssemblyScript Project Lead</h2>
+      <ul class="tags">
+        <li class="primary">Freelance</li>
+        <li class="primary">2017-</li>
+        <li>Compiler Construction</li>
+        <li>JavaScript</li>
+        <li>TypeScript</li>
+        <li>WebAssembly</li>
+        <li>Project Management</li>
+        <li>CI/CD</li>
+      </ul>
+      <p>Created the AssemblyScript programming language and compiler, pioneering a groundbreaking approach to empower web developers to harness the power of WebAssembly. Renowned for bridging the gap between low-level programming and pre-existing web technology, my innovative work has garnered widespread recognition accross the industry, contributing to the next generation of web technology and the broader adoption of WebAssembly.</p>
+      <object type="image/svg+xml" data="assets/images/compiler.svg" aria-label="Animated compilation pipeline from source code over immediate representation to binary file." tabindex="-1" width="680" style="aspect-ratio: 680/280"></object>
+      <p class="subtitle" id="compilers-areas">Key areas</p>
+      <div class="areas" aria-labelledby="compilers-areas">
+        <div class="area">
+          <h3>Language Implementation</h3>
+          <p>Conceptualized and crafted the AssemblyScript programming language, dedicated to seamlessly integrating low-level programming with the web.</p>
+        </div>
+        <div class="area">
+          <h3>Free and Open Source</h3>
+          <p>Applied my expertise in creating and maintaining open-source software and made AssemblyScript available under a permissive license for universal accessibility.</p>
+        </div>
+        <div class="area">
+          <h3>Collaboration with Stakeholders</h3>
+          <p>Collaborated with a diverse range of stakeholders, including industry leaders like Shopify as well as independent individuals, to shape and advance the project's vision.</p>
+        </div>
+        <div class="area">
+          <h3>Documentation and Education</h3>
+          <p>Authored comprehensive documentation, offering insights from low-level to conceptual perspectives on WebAssembly and AssemblyScript.</p>
+        </div>
+        <div class="area">
+          <h3>Project Responsibility</h3>
+          <p>As the project lead, I created the language, compiler, and tools while also establishing and maintaining the surrounding infrastructure and community hub.</p>
+        </div>
+        <div class="area">
+          <h3>Industry Recognition</h3>
+          <p>Witnessed my efforts in AssemblyScript receive industry acclaim, as the language gained traction and earned recognition among developers worldwide.</p>
+        </div>
+      </div>
+      <p class="subtitle" id="compilers-samples">Work samples</p>
+      <ul class="samples" aria-labelledby="compilers-samples">
+        <li><a href="https://www.assemblyscript.org" rel="external noopener">AssemblyScript's Website</a><br />Online AssemblyScript playground, testimonials, documentation, and examples.</li>
+        <li><a href="https://github.com/AssemblyScript/assemblyscript" rel="external noopener">AssemblyScript Repository</a> &nbsp; <img class="badge" height="20" src="https://img.shields.io/github/stars/AssemblyScript/assemblyscript?style=flat-square&color=333333" alt=""/><br />Umbrella GitHub organization for everything AssemblyScript.</li>
+      </ul>
+    </article>
+    <article id="standards">
+      <h2 data-text="Web Standards Contributor" class="glitch">Web Standards Contributor</h2>
+      <ul class="tags">
+        <li class="primary">Freelance</li>
+        <li class="primary">2017-2023</li>
+        <li>WebAssembly</li>
+        <li>ECMAScript</li>
+        <li>C/C++</li>
+        <li>Standardization</li>
+      </ul>
+      <p>Actively participated in the W3C WebAssembly standardization process as an independent expert, dedicated to maximizing performance and advancing graceful interoperability of WebAssembly with JavaScript and the Web. Renowned for providing firsthand implementer feedback and contributing to WebAssembly tooling, my steadfast commitment to WebAssembly's original vision has left a lasting impact on its evolution within the web development landscape and beyond.</p>
+      <blockquote><span class="first-letter">“I</span>f you don't want a house built, hide the nails and wood. If you don't want a man unhappy politically, don't give him two sides of a question to worry him; give him one. Better yet, give him none.”</blockquote>
+      <p class="subtitle" id="standards-areas">Key areas</p>
+      <div class="areas" aria-labelledby="standards-areas">
+        <div class="area">
+          <h3>Standardization Engagement</h3>
+          <p>Navigated the complex realm of web standards, engaging in discussions dominated by major corporations. Obtained invaluable experience and insights into motivations and mechanisms that either advance or obstruct technological progress.</p>
+        </div>
+        <div class="area">
+          <h3>Kick-Starting WebAssembly</h3>
+          <p>Established a prolific collaboration record on critical infrastructure projects, notably contributing to Binaryen, Google's optimizer and compiler/toolchain library, and helped to make available and improve foundational WebAssembly tooling.</p>
+        </div>
+      </div>
+      <p class="subtitle" id="standards-samples">Work samples</p>
+      <ul class="samples" aria-labelledby="standards-samples">
+        <li><a href="https://www.youtube.com/watch?v=Ri2NMnSQo4o" rel="external noopener">WebAssembly, Unicode and the Web Platform</a><br />Presentation given to the WebAssembly CG about potential friction on the web.</li>
+        <li><a href="https://github.com/WebAssembly/binaryen/commits/main/?author=dcodeIO" rel="external noopener">Contributions to Binaryen</a> &nbsp; <img class="badge" height="20" src="https://img.shields.io/github/issues-search/WebAssembly/binaryen?query=is%3Aissue%20author%3AdcodeIO&label=issues&style=flat-square&color=333333" alt=""/> <img class="badge" height="20" src="https://img.shields.io/github/issues-search/WebAssembly/binaryen?query=is%3Apr%20author%3AdcodeIO&label=pull%20requests&style=flat-square&color=333333" alt=""/><br />Accepted additions to Google's compiler and toolchain library for WebAssembly.</li>
+      </ul>
+    </article>
+    <article id="mods">
+      <h2 data-text="Game Modification Developer" class="glitch">Game Modification Developer</h2>
+      <ul class="tags">
+        <li class="primary">Self-employed</li>
+        <li class="primary">2015-</li>
+        <li>C#</li>
+        <li>Unity</li>
+        <li>JavaScript</li>
+        <li>HTML/CSS</li>
+        <li>Node.js</li>
+        <li>WebSocket</li>
+        <li>RESTful APIs</li>
+      </ul>
+      <p>Crafted an innovative modification for a popular survival multiplayer game, introducing a browser-based companion interface that integrates with the game's servers. Implemented features for realtime location sharing and access to valuable in-game information, empowering players to make strategic decisions and coordinate effectively with allies. The game's original creators eventually expanded upon the novel idea by integrating part of the functionality into the game and releasing an official companion app.</p>
+      <object type="image/svg+xml" data="./assets/images/worldmap.svg" aria-label="Illustration of background information gathering and browser-based location sharing on live world map." tabindex="-1" width="600" style="aspect-ratio: 600/290"></object>
+      <p class="subtitle" id="mods-areas">Key areas</p>
+      <div class="areas" aria-labelledby="mods-areas">
+        <div class="area">
+          <h3>Game Modification</h3>
+          <p>Used C# and Unity tools to integrate HTTP & WebSocket layers directly into game servers, enabling seamless communication for integrating with a central interactive UI.</p>
+        </div>
+        <div class="area">
+          <h3>World Map Generation</h3>
+          <p>Extracted real-time information from internal game server data structures and translated the information into visually appealing world images and accompanying data.</p>
+        </div>
+        <div class="area">
+          <h3>Interactive Web UI</h3>
+          <p>Created an interactive web UI that transparently connects to game servers, showing the server's world map, critical landmarks, danger zones and live locations of allied players.</p>
+        </div>
+        <div class="area">
+          <h3>Steam API Integration</h3>
+          <p>Integrated with Steam APIs for single sign-in and scheduled querying of game servers worldwide, continuously retrieving, processing, and categorizing relevant information.</p>
+        </div>
+        <div class="area">
+          <h3>Insights As A Service</h3>
+          <p>Orchestrated a generation service, maintaining a pool of game servers to convert public information about any game server into concrete world maps on demand.</p>
+        </div>
+        <div class="area">
+          <h3>Global Server Listing</h3>
+          <p>Beyond the core game extension, created a global information hub empowering players to search, filter, and explore available public game servers worldwide.</p>
+        </div>
+      </div>
+    </article>
+    <article id="messenger">
+      <h2 data-text="Cross-Platform App Developer" class="glitch">Cross-Platform App Developer</h2>
+      <ul class="tags">
+        <li class="primary">Self-employed</li>
+        <li class="primary">2013-2015</li>
+        <li>Apache Cordova</li>
+        <li>Java</li>
+        <li>Objective-C</li>
+        <li>JavaScript</li>
+        <li>Node.js</li>
+        <li>HTML/CSS</li>
+        <li>Android and iOS SDKs</li>
+      </ul>
+      <p>Created a cross-platform instant messaging application, securely connecting users across Android, iOS, and web browsers. Demonstrating proficiency in mobile app development, implementation of security protocols, and ensuring cross-platform interoperability, I pioneered an early user-friendly and privacy-focused messaging solution.</p>
+      <canvas id="msgr" height="0" aria-label="3D illustration of secure cross-platform messaging."></canvas>
+      <script>document.getElementById("msgr").height = 250</script>
+      <p class="subtitle" id="messenger-subtitle">Key areas</p>
+      <div class="areas" aria-labelledby="messenger-subtitle">
+        <div class="area">
+          <h3>Cross-Platform Development</h3>
+          <p>Ensured a consistent and smooth user experience across Android, iOS and web browsers, maximizing accessibility for a broad user base.</p>
+        </div>
+        <div class="area">
+          <h3>Real-Time Communication</h3>
+          <p>Integrated real-time encrypted messaging features over HTTPS and WebSocket with certificate pinning on mobile, enabling private instant communication accross ecosystems.</p>
+        </div>
+        <div class="area">
+          <h3>Security-Centric Architecture</h3>
+          <p>Implemented robust security protocols utilizing public key cryptography to safeguard user data, ensuring end-to-end encryption for all communications.</p>
+        </div>
+        <div class="area">
+          <h3>Backend Infrastructure</h3>
+          <p>Established and maintained backend infrastructure utilizing asynchronous I/O with Node.js to provide a reliable and high-throughput communication service.</p>
+        </div>
+      </div>
+    </article>
+    <article id="libraries">
+      <h2 data-text="Open Source Library Author" class="glitch">Open Source Library Author</h2>
+      <ul class="tags">
+        <li class="primary">Freelance</li>
+        <li class="primary">2013-</li>
+        <li>JavaScript</li>
+        <li>TypeScript</li>
+        <li>Node.js</li>
+        <li>Project Management</li>
+        <li>CI/CD</li>
+      </ul>
+      <p>Authored several widely-used JavaScript libraries encompassing serialization, data types, cryptography, WebAssembly and more. My libraries, with millions of downloads per week on npm, serve as integral components in the infrastructure of major companies such as Amazon and Google. Protobuf.js, for instance, has become an essential component of their cloud SDKs.</p>
+      <p class="center">Trusted by teams at</p>
+      <div class="logos">
+        <img src="assets/companies/amazon.svg" alt="Amazon" width="150" height="45" loading="lazy"/>
+        <img src="assets/companies/google.svg" alt="Google" width="150" height="50" loading="lazy"/>
+        <img src="assets/companies/tencent.svg" alt="Tencent" width="150" height="29" loading="lazy"/>
+        <img src="assets/companies/valve.svg" alt="Valve" width="150" height="42" loading="lazy"/>
+        <img src="assets/companies/wire.svg" alt="Wire" width="150" height="40" loading="lazy"/>
+        <img src="assets/companies/yandex.svg" alt="Yandex" width="150" height="37" loading="lazy"/>
+      </div>
+      <p class="center"><a href="https://www.npmjs.com/browse/depended/protobufjs" rel="external noopener">and</a> <a href="https://www.npmjs.com/browse/depended/long" rel="external noopener">many</a> <a href="https://www.npmjs.com/browse/depended/bcryptjs" rel="external noopener">others</a>.</p>
+      <p class="subtitle" id="libraries-areas">Key areas</p>
+      <div class="areas" aria-labelledby="libraries-areas">
+        <div class="area">
+          <h3>Ecosystem Contributions</h3>
+          <p>Authored a collection of highly regarded JavaScript libraries that garnered widespread adoption across the industry, with millions of weekly downloads.</p>
+        </div>
+        <div class="area">
+          <h3>Foundational Work</h3>
+          <p>Offered the industry and community solutions for complex problems, unlocking use cases that were previously impractical to implement with JavaScript.</p>
+        </div>
+        <div class="area">
+          <h3>Open Source Maintenance</h3>
+          <p>Published my libraries on GitHub under permissive licenses, overseeing not only development but also issue resolution and inclusion of contributions.</p>
+        </div>
+        <div class="area">
+          <h3>Industry Collaboration</h3>
+          <p>Collaborated on several external projects, such as extending the JavaScript ports of Binaryen and WABT with TypeScript definitions and comprehensive documentation.</p>
+        </div>
+      </div>
+      <p class="subtitle" id="libraries-samples">Work samples</p>
+      <ul class="samples" aria-labelledby="libraries-samples">
+        <li><a href="https://www.npmjs.com/package/protobufjs" rel="external noopener">protobuf.js</a> &nbsp; <img class="badge" height="20" src="https://img.shields.io/npm/dw/protobufjs?style=flat-square&color=333333" alt/> <img class="badge" height="20" src="https://img.shields.io/github/stars/protobufjs/protobuf.js?style=flat-square&color=333333" alt=""/><br />A widely-used JavaScript library for Protocol Buffers serialization and deserialization.</li>
+        <li><a href="https://www.npmjs.com/package/long" rel="external noopener">long.js</a> &nbsp; <img class="badge" height="20" src="https://img.shields.io/npm/dw/long?style=flat-square&color=333333" alt/> <img class="badge" height="20" src="https://img.shields.io/github/stars/dcodeIO/long.js?style=flat-square&color=333333" alt=""/><br />A JavaScript library for handling 64-bit integers.</li>
+        <li><a href="https://www.npmjs.com/package/bcryptjs" rel="external noopener">bcrypt.js</a> &nbsp; <img class="badge" height="20" src="https://img.shields.io/npm/dw/bcryptjs?style=flat-square&color=333333" alt/> <img class="badge" height="20" src="https://img.shields.io/github/stars/dcodeIO/bcrypt.js?style=flat-square&color=333333" alt=""/><br />A JavaScript library for hashing passwords using bcrypt.</li>
+        <li><a href="https://www.npmjs.com/package/binaryen" rel="external noopener">binaryen.js</a> &nbsp; <img class="badge" height="20" src="https://img.shields.io/npm/dw/binaryen?style=flat-square&color=333333" alt/> <img class="badge" height="20" src="https://img.shields.io/github/stars/AssemblyScript/binaryen.js?style=flat-square&color=333333" alt=""/><br />JavaScript port of Binaryen, providing tools for optimizing WebAssembly code.</li>
+        <li><a href="https://www.npmjs.com/package/wabt" rel="external noopener">wabt.js</a> &nbsp; <img class="badge" height="20" src="https://img.shields.io/npm/dw/wabt?style=flat-square&color=333333" alt/> <img class="badge" height="20" src="https://img.shields.io/github/stars/AssemblyScript/wabt.js?style=flat-square&color=333333" alt=""/><br />JavaScript port of WABT, a tool for inspecting and manipulating WebAssembly modules.</li>
+      </ul>
+    </article>
+    <article id="games">
+      <h2 data-text="Game Developer" class="glitch">Game Developer</h2>
+      <ul class="tags">
+        <li class="primary">Self-Employed</li>
+        <li class="primary">2011-</li>
+        <li>Java</li>
+        <li>PHP</li>
+        <li>JavaScript</li>
+        <li>HTML/CSS</li>
+        <li>SQL</li>
+        <li>RESTful APIs</li>
+      </ul>
+      <p>Developed and managed a cross-platform online multiplayer strategy game. Leveraging a diverse skill set encompassing game design, programming, server management and community building, I created a fun and engaging gaming experience that fostered player interaction. Throughout its lifespan, the game has attracted about 100.000 players.</p>
+      <svg class="scroll noprint" viewbox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" aria-label="Various impressions from the game, showing online leaderboard, user manual and ingame screenshots." tabindex="-1" style="max-width: 640px">
+        <image href="assets/images/ctd2.webp" width="266" height="200" x="10" y="50" style="translate: 0 calc(var(--scroll) * 80px - 40px); transition: translate 0.25s ease-out"/>
+        <image href="assets/images/ctd3.webp" width="266" height="200" x="364" y="50"  style="translate: 0 calc(var(--scroll) * -80px + 40px); transition: translate 0.25s ease-out"/>
+        <image href="assets/images/ctd1.webp" width="399" height="300" x="120" style="transform-origin: center; scale: calc(0.9 + min(var(--scroll) * 0.17, 0.1)); transition: scale 0.25s ease-out"/>
+      </svg>
+      <p class="subtitle" id="games-areas">Key areas</p>
+      <div class="areas" aria-labelledby="games-areas">
+        <div class="area">
+          <h3>Full-Stack Game Development</h3>
+          <p>Implemented end-to-end game development, covering programming, graphics, sound, and server architecture to ensure seamless online multiplayer functionality.</p>
+        </div>
+        <div class="area">
+          <h3>Community Integration</h3>
+          <p>Integrated community features within the game, promoting player interaction and competitive play. Established forums, leaderboards, statistics and in-game chat systems.</p>
+        </div>
+        <div class="area">
+          <h3>Brand & Interface Design</h3>
+          <p>Designed intuitive and visually appealing brand elements and user interfaces, both in-game and on the web, contributing to a positive and coherent player experience.</p>
+        </div>
+        <div class="area">
+          <h3>Community-Created Content</h3>
+          <p>Crafted APIs and tools to empower players in generating custom content such as maps and themes, fostering community engagement and nurturing creativity.</p>
+        </div>
+      </div>
+      <p class="subtitle" id="games-samples">Work samples</p>
+      <ul class="samples" aria-labelledby="games-samples">
+        <li><a href="https://www.youtube.com/watch?v=UgvxBWX2ZcQ" rel="external noopener">CreepTD Teaser</a><br />Introductory video created to celebrate the game's launch, featuring live gameplay.</li>
+      </ul>
+    </article>
+    <article id="community">
+      <h2 data-text="Social Networking Entrepreneur" class="glitch">Social Networking Entrepreneur</h2>
+      <ul class="tags">
+        <li class="primary">Self-Employed</li>
+        <li class="primary">2002-2016</li>
+        <li>PHP</li>
+        <li>Java</li>
+        <li>JavaScript</li>
+        <li>HTML/CSS</li>
+        <li>MySQL</li>
+        <li>Memcached</li>
+        <li>Debian/Linux</li>
+      </ul>
+      <p>While still at high school, I conceptualized, designed and implemented a feature-rich social networking platform at the inception point of the social media era, obtaining broad expertise in full-stack development, encompassing programming, web & print design, as well as community, event and server management. In addition to the technical and organizational aspects, I gained valuable insights into the broader challenges and dynamics of today's digital world.</p>
+      <object type="image/svg+xml" data="assets/images/community.svg" aria-label="Illustration where icons representing user actions move between circles, depicting vivid interaction in an online social network" tabindex="-1" width="641" style="aspect-ratio: 641/281"></object>
+      <p class="subtitle" id="community-areas">Key areas</p>
+      <div class="areas" aria-labelledby="community-areas">
+        <div class="area">
+          <h3>Innovative Conceptualization</h3>
+          <p>Pioneered development of a user-centric social network, anticipating the social media boom at a time when platforms like Facebook were not yet established.</p>
+        </div>
+        <div class="area">
+          <h3>Full-Stack Mastery</h3>
+          <p>Single-handedly coded backend infrastructure, crafted an intuitive user interface, and employed cutting-edge technology for optimal performance.</p>
+        </div>
+        <div class="area">
+          <h3>Web & Print Design</h3>
+          <p>Led the design process, crafting a visually appealing corporate identity for the brand, encompassing web design, print products and merchandise.</p>
+        </div>
+        <div class="area">
+          <h3>Server Cluster Management</h3>
+          <p>Established and maintained a robust server architecture, ensuring system security, optimal performance and scalability through load distribution, caching and replication.</p>
+        </div>
+        <div class="area">
+          <h3>Community Management</h3>
+          <p>Attracted more than 200.000 yearly active users at its peak by fostering a strong sense of community and continuously implementing innovative features.</p>
+        </div>
+        <div class="area">
+          <h3>Financial Sustainability</h3>
+          <p>Implemented effective monetization strategies, integrating advertising platforms, mobile payment systems, and event hosting to ensure the project's sustainability.</p>
+        </div>
+      </div>
+    </article>
+    <aside class="sticky">Creative Pursuits<span aria-hidden="true"> ://</span></aside>
+    <article id="music">
+      <h2 data-text="Music Enthusiast" class="glitch">Music Enthusiast</h2>
+      <ul class="tags">
+        <li class="primary">Hobbyist</li>
+        <li>Piano</li>
+        <li>Trumpet</li>
+        <li>Digital Audio Workstation</li>
+      </ul>
+      <p>As a hobbyist musician, I have a deep passion for music and enjoy playing the piano and trumpet in my free time. Additionally, I have experience with digital audio workstations, where I explore my creativity through composing and producing electronic music. My love for music not only enriches my personal life but also influences my approach to problem-solving and creativity in software development, particularly in game-related projects.</p>
+      <p class="subtitle" id="music-samples">Discover</p>
+      <ul class="samples" aria-labelledby="music-samples">
+        <li><a href="https://soundcloud.com/dcode-music" rel="external noopener">SoundCloud Profile</a><br />Various (not to be taken too seriously) works of mine on SoundCloud.</li>
+      </ul>
+    </article>
+    <article id="nature">
+      <h2 data-text="Nature Seeker" class="glitch">Nature Seeker</h2>
+      <ul class="tags">
+        <li class="primary">Hobbyist</li>
+        <li>Recreation</li>
+        <li>Personal Growth</li>
+      </ul>
+      <p>Living near Eifel National Park, I regularly embark on recreational walks to immerse myself in nature. These experiences provide moments of tranquility and inspiration, fueling my creativity and personal growth. By experiencing the beauty and silence of nature, I find balance and rejuvenation, enriching both my personal and professional life.</p>
+      <p class="subtitle" id="nature-explore">Explore</p>
+      <ul class="samples" aria-labelledby="nature-explore">
+        <li><a href="https://www.nationalpark-eifel.de/" rel="external noopener">Eifel National Park</a><br />Let nature be nature.</li>
+        <li><a href="https://www.naturpark-eifel.de/" rel="external noopener">High Fens - Eifel Nature Park</a><br />The surrounding nature park.</li>
+      </ul>
+    </article>
+  </section>
+</main>
+<footer>
+  <div class="group" aria-labelledby="copy-title">
+    <p class="title" id="copy-title">&copy 2024 dcode.io</p>
+    <ul>
+      <li>
+        <div id="legal" lang="de">
+          <a href="#back"><img src="assets/icons/square-x.svg" class="icon close" style="filter: invert(1.0)" alt=""/></a>
+          <div class="title">Legal Notice / Impressum</div>
+          <p class="info">Angaben gemäß §5 TMG</p>
+          <p>Daniel Wirtz<br />Rathergasse 5<br />53894 Mechernich<br />Germany</p>
+          <p class="info">Kontakt</p>
+          <p>Mail: dcode@dcode.io<br />Tel.: +49 2443 9127669</p>
+          <p class="info">VAT/USt-IdNr. gemäß §27a UStG</p>
+          <p>DE262739457</p>
+          <p><img src="assets/icons/caret-right.svg" class="icon" width="10" height="20" alt="" /> &nbsp;<a href="http://ec.europa.eu/consumers/odr/">EU Online-Streitbeilegung</a></p>
+          <p class="info">Verbraucherstreitbeilegung</p>
+          <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+        </div>
+        <a href="#legal">Legal Notice / Impressum</a><span class="onlyprint">.</span>&nbsp;
+      </li>
+      <li>No incidents for <span class="label">0</span> days.</li>
+    </ul>
+  </div>
+  <div class="group" aria-labelledby="social-title">
+    <p class="title" id="social-title">Social</p>
+    <ul>
+      <li><img src="assets/icons/github.svg" class="icon" width="20" height="20" alt="" /> <a href="https://github.com/dcodeIO" rel="external noopener">GitHub</a></li>
+      <li><img src="assets/icons/linkedin.svg" class="icon" width="20" height="20" alt="" /> <a href="https://www.linkedin.com/in/dcodeio" rel="external noopener">LinkedIn</a></li>
+    </ul>
+  </div>
+  <div class="group" aria-labelledby="resources-title">
+    <p class="title" id="resources-title">Resources</p>
+    <ul>
+      <li><img src="assets/icons/code.svg" class="icon" width="20" height="20" alt="" /> <a href="https://github.com/dcodeIO/dcodeio.github.io" rel="external noopener">Site source code</a></li>
+      <li><img src="assets/icons/issue.svg" class="icon" width="20" height="20" alt="" /> <a href="https://github.com/dcodeIO/dcodeio.github.io/issues" rel="external noopener">Report an issue</a></li>
+    </ul>
+  </div>
+</footer>
+<a href="#up" id="uplink" title="Go back to top"></a>
+</body>
+</html>
